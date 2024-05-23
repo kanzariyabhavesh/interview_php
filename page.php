@@ -1,7 +1,6 @@
 <?php
 session_start();
-print_r($_SESSION['email']);
-if (isset($_SESSION['email'])) {
+if (!isset($_SESSION['emailvalue'])) {
 header("location:logout.php"); 
 }
 echo "login success";

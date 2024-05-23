@@ -3,6 +3,7 @@ include 'conn.php';
 $passwordvalue='';
 session_start();
 if (isset($_POST['email'])) {
+$_SESSION['emailvalue']=$_POST['email'];
 $emailvalue=$_POST['email'];
 }
 
@@ -18,7 +19,7 @@ $sql="SELECT 'email','password' FROM `form_data` where `email`='$emailvalue' And
 $result=mysqli_query($con,$sql);
 $row=mysqli_num_rows($result);
 
-if ($row ==1) {
+if ($row == 1) {
     
     header("location:page.php");
 }

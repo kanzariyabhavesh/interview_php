@@ -6,9 +6,4 @@ $id=$_POST['deleteid'];
    
    $result=mysqli_query($con,$sql);
 
-//    if ($result) {
-
-
-
-//    }
 ?>
