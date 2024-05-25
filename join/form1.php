@@ -113,6 +113,8 @@ if (isset($_GET['edit'])) {
 
         $sql = "SELECT form1_data.id,form1_data.fname,form1_data.lname,form1_data.email,form1_data.address,form1_data.password,form1_data.Gender,form_data.phone FROM  form1_data inner join form_data on form1_data.email = form_data.email";
 
+        // $sql = "SELECT form1_data.id,form1_data.fname,form1_data.lname,form1_data.email,form1_data.address,form1_data.password,form1_data.Gender,form_data.phone FROM  form1_data join form_data on form1_data.email = form_data.email";
+
         $result = mysqli_query($con, $sql);
 
         $no=0;
